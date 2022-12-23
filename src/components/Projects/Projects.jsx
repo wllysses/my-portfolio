@@ -1,46 +1,52 @@
 import { Container, Typography } from "@mui/material"
+import gitsearch from '../../assets/gitsearch.png'
+import primeflix from '../../assets/primeflix.png'
+import weatherapp from '../../assets/weatherapp.png'
+import fakestore from '../../assets/fakestore.png'
+import coinconverter from '../../assets/coinconverter.png'
+import pokedex from '../../assets/pokedex.png'
 import styled from "styled-components"
 
 export const Projects = () => {
 
     let projects = [
         {   
-            img: 'https://www.soumya-jit.tech/static/media/chatify.7206044e0b5cdad44726.png',
+            img: gitsearch,
             name: 'GitSearch',
             description: 'Projeto criado a partir do consume da API REST do próprio Github para facilitar a busca por usuários e informações sobre o mesmo.',
             deploy: 'https://gitsearch-app.netlify.app/',
             repository: 'https://github.com/wllysses/gitsearch'
         },
         {   
-            img: 'https://www.soumya-jit.tech/static/media/chatify.7206044e0b5cdad44726.png',
+            img: pokedex,
             name: 'PokeDéx',
             description: 'Projeto criado consumindo a API REST PokéAPI com o intuito de facilitar a busca e visualização de detalhes específicos sobre os mais diversos Pokemons.',
             deploy: '',
             repository: 'https://github.com/wllysses/quest-pokedex'
         },
         {
-            img: 'https://www.soumya-jit.tech/static/media/chatify.7206044e0b5cdad44726.png',
+            img: primeflix,
             name: 'PrimeFlix',
             description: 'Sistema para visualização de detalhes de filmes dos mais diversos gêneros. Criado a partir do consumo da API REST MovieDB.',
             deploy: 'https://project-prime-flix.netlify.app/',
             repository: 'https://github.com/wllysses/project-primeflix'
         },
         {
-            img: 'https://www.soumya-jit.tech/static/media/chatify.7206044e0b5cdad44726.png',
+            img: weatherapp,
             name: 'MyWeatherApp',
             description: 'Projeto criado consumindo a API OpenWeather com o intuito de facilitar a busca por informações climáticas relacionadas a cidade desejada.',
             deploy: 'https://my-weather-app2022.netlify.app/',
             repository: 'https://github.com/wllysses/myWeatherApp'
         },
         {
-            img: 'https://www.soumya-jit.tech/static/media/chatify.7206044e0b5cdad44726.png',
+            img: fakestore,
             name: 'FakeStore',
             description: 'Projeto criado consumindo a API FakeStoreApi com o intuito de simular um e-commerce com a funcionalidade de adicionar o projeto ao carrinho de compras.',
             deploy: 'https://fabrica-fake-store.vercel.app/',
             repository: 'https://github.com/wllysses/fake-store'
         },
         {
-            img: 'https://www.soumya-jit.tech/static/media/chatify.7206044e0b5cdad44726.png',
+            img: coinconverter,
             name: 'CoinConverter',
             description: 'Projeto criado consumindo uma API que retorna o valor atual de várias moedas com o intuito de simplificar a conversão de valores entre moedas estrangeiras e a moeda corrente do Brasil (BRL).',
             deploy: '',
