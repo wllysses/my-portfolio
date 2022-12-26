@@ -54,5 +54,11 @@ const AboutMeWrapper = styled.div`
         display: flex;
         justify-content: center;
         margin-top: 2rem;
+
+        button {
+            a {
+                position: static;
+            }
+        }
     }
 `

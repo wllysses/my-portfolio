@@ -15,42 +15,48 @@ export const Projects = () => {
             name: 'GitSearch',
             description: 'Projeto criado a partir do consume da API REST do próprio Github para facilitar a busca por usuários e informações sobre o mesmo.',
             deploy: 'https://gitsearch-app.netlify.app/',
-            repository: 'https://github.com/wllysses/gitsearch'
+            repository: 'https://github.com/wllysses/gitsearch',
+            techs: ['HTML', 'CSS', 'Javascript', 'Styled-Components', 'React-Router-DOM', 'Material UI', 'API Rest', 'Animate.CSS']
         },
         {   
             img: pokedex,
             name: 'PokeDéx',
             description: 'Projeto criado consumindo a API REST PokéAPI com o intuito de facilitar a busca e visualização de detalhes específicos sobre os mais diversos Pokemons.',
             deploy: '',
-            repository: 'https://github.com/wllysses/quest-pokedex'
+            repository: 'https://github.com/wllysses/quest-pokedex',
+            techs: ['HTML', 'CSS','Javascript', 'Styled-Components', 'React-Router-DOM', 'Context API', 'API Rest']
         },
         {
             img: primeflix,
             name: 'PrimeFlix',
             description: 'Sistema para visualização de detalhes de filmes dos mais diversos gêneros. Criado a partir do consumo da API REST MovieDB.',
             deploy: 'https://project-prime-flix.netlify.app/',
-            repository: 'https://github.com/wllysses/project-primeflix'
+            repository: 'https://github.com/wllysses/project-primeflix',
+            techs: ['HTML', 'CSS','Javascript', 'Styled-Components', 'React Bootstrap', 'API Rest']
         },
         {
             img: weatherapp,
             name: 'MyWeatherApp',
             description: 'Projeto criado consumindo a API OpenWeather com o intuito de facilitar a busca por informações climáticas relacionadas a cidade desejada.',
             deploy: 'https://my-weather-app2022.netlify.app/',
-            repository: 'https://github.com/wllysses/myWeatherApp'
+            repository: 'https://github.com/wllysses/myWeatherApp',
+            techs: ['HTML', 'CSS','Javascript', 'Styled-Components', 'React-Router-DOM', 'API Rest']
         },
         {
             img: fakestore,
             name: 'FakeStore',
             description: 'Projeto criado consumindo a API FakeStoreApi com o intuito de simular um e-commerce com a funcionalidade de adicionar o projeto ao carrinho de compras.',
             deploy: 'https://fabrica-fake-store.vercel.app/',
-            repository: 'https://github.com/wllysses/fake-store'
+            repository: 'https://github.com/wllysses/fake-store',
+            techs: ['HTML', 'CSS','Javascript', 'Styled-Components', 'React-Router-DOM', 'Material UI', 'API Rest', 'Bootstrap']
         },
         {
             img: coinconverter,
             name: 'CoinConverter',
             description: 'Projeto criado consumindo uma API que retorna o valor atual de várias moedas com o intuito de simplificar a conversão de valores entre moedas estrangeiras e a moeda corrente do Brasil (BRL).',
             deploy: '',
-            repository: 'https://github.com/wllysses/coin-converter'
+            repository: 'https://github.com/wllysses/coin-converter',
+            techs: ['HTML', 'CSS','Javascript', 'Styled-Components', 'React-Router-DOM', 'API Rest']
         }
     ]
 
@@ -65,6 +71,20 @@ export const Projects = () => {
                                 <div className="project" key={index}>
                                     <div className="project-img">
                                         <img src={projectData.img} alt="" />
+                                        <div className="project-info">
+                                            <div className="techs">
+                                                <Typography variant="h5" marginBottom={1} fontWeight='bold'>Tecnologias e Bibliotecas</Typography>
+                                                <ul className="p-0">
+                                                    {
+                                                        projectData.techs.map((tech, index) => {
+                                                            return (
+                                                                <li key={index}>{tech}</li>
+                                                            )
+                                                        })
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="project-data">
                                         <Typography variant="h4">{projectData.name}</Typography>
@@ -101,20 +121,33 @@ const ProjectsWrapper = styled.div`
         gap: 2rem;
 
         .project {
-            max-width: 350px;
             width: 100%;
             min-height: 500px;
             color: var(--white);
-            box-shadow: 0 5px 10px var(--secondary-color);
-            padding: 0.5rem;
+            box-shadow: 0 5px 20px var(--secondary-color);
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 1rem;
 
-            .project-img img {
-                max-width: 100%;
+            .project-img  {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 50%;
+                }
+
+                @media(max-width: 950px) {
+                    flex-direction: column;
+
+                    img {
+                    max-width: 100%;
+                }
+                }
             }
 
             .project-data {
@@ -122,6 +155,15 @@ const ProjectsWrapper = styled.div`
                 flex-direction: column;
                 align-items: center;
                 gap: 0.5rem
+            }
+
+            .project-links {
+                button {
+
+                    a {
+                        position: static;
+                    }
+                }
             }
         }
     }
