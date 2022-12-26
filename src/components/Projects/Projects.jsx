@@ -22,7 +22,7 @@ export const Projects = () => {
             img: pokedex,
             name: 'PokeDéx',
             description: 'Projeto criado consumindo a API REST PokéAPI com o intuito de facilitar a busca e visualização de detalhes específicos sobre os mais diversos Pokemons.',
-            deploy: '',
+            deploy: 'https://github.com/wllysses/quest-pokedex',
             repository: 'https://github.com/wllysses/quest-pokedex',
             techs: ['HTML', 'CSS','Javascript', 'Styled-Components', 'React-Router-DOM', 'Context API', 'API Rest']
         },
@@ -54,7 +54,7 @@ export const Projects = () => {
             img: coinconverter,
             name: 'CoinConverter',
             description: 'Projeto criado consumindo uma API que retorna o valor atual de várias moedas com o intuito de simplificar a conversão de valores entre moedas estrangeiras e a moeda corrente do Brasil (BRL).',
-            deploy: '',
+            deploy: 'https://github.com/wllysses/coin-converter',
             repository: 'https://github.com/wllysses/coin-converter',
             techs: ['HTML', 'CSS','Javascript', 'Styled-Components', 'React-Router-DOM', 'API Rest']
         }
@@ -87,7 +87,7 @@ export const Projects = () => {
                                         </div>
                                     </div>
                                     <div className="project-data">
-                                        <Typography variant="h4">{projectData.name}</Typography>
+                                        <Typography variant="h4" fontWeight={700}>{projectData.name}</Typography>
                                         <Typography paragraph align="justify">{projectData.description}</Typography>
                                     </div>
                                     <div className="project-links d-flex gap-1">
