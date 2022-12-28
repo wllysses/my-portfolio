@@ -40,6 +40,10 @@ const NavBar = styled.nav`
         font-size: 1.5rem;
     }
 
+    .offcanvas {
+        bottom: auto;
+    }
+
     ul {
         gap: 1rem;
         li {
